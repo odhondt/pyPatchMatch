@@ -1,5 +1,6 @@
 # pyPatchMatch
-a simple python wrapper for the patch match algorithm using the CImg library.
+
+A simple python wrapper for the patch match algorithm using the CImg library.
 
 Usage:
 
@@ -8,7 +9,7 @@ patch_match(np.ndarray[np.float32_t, ndim=3] arr0, np.ndarray[np.float32_t, ndim
 ```
 
 **Important:**
-CImg memory stores images with a different layout than scipy.ndimage.
+CImg stores images with a different memory layout than scipy.ndimage.
 
 If the shapes of your numpy arrays (say `img0` and `img1`) are `[nrows,ncols,nchannel]` then you should pass 
 
@@ -18,5 +19,5 @@ cimg0 = np.rollaxes(img0,2)
 
 (resp. `cimg1`) to the `patch_match()` function.
 
-The original documentation of the plugin is available at:
+The documentation of the c++ plugin is available at:
 https://github.com/odhondt/PatchMatch_plugin
