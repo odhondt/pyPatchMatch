@@ -14,7 +14,7 @@ CImg stores images with a different memory layout than scipy.ndimage.
 If the shapes of your numpy arrays (say `img0` and `img1`) are `[nrows,ncols,nchannel]` then you should pass 
 
 ```python
-cimg0 = np.rollaxes(img0,2)
+cimg0 = np.rollaxes(img0,2).copy()
 ```
 
 (resp. `cimg1`) to the `patch_match()` function.
