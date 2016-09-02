@@ -198,9 +198,6 @@ CImg<T>& patchMatch(const CImg<Tt> &img0, const CImg<Tt> &img1,
         }
       }
   }
-//  cimg_forXYC(*this, x, y, c)
-//    (*this)(x,y,c) = off(x,y,c); 
-//  return *this;
   return off.move_to(*this);
 }
 
