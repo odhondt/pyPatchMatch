@@ -73,7 +73,7 @@ static T distPatch(const CImg<T> &img0, const CImg<T> &img1,
                    const int pSize) {
   T d2 = 0;
   cimg_forC(img0,c) for (int y = 0; y < pSize; ++y) for (int x = 0; x < pSize; ++x) {
-      const T d = (img0(x0 + x, y0 + y, c) - img1(x1 + x, y1 + y, c));
+      const T d = T (img0(x0 + x, y0 + y, c) - img1(x1 + x, y1 + y, c)) + 0.1;
       d2 += d*d;
     }
   return d2;
@@ -198,6 +198,9 @@ CImg<T>& patchMatch(const CImg<Tt> &img0, const CImg<Tt> &img1,
         }
       }
   }
+//  cimg_forXYC(*this, x, y, c)
+//    (*this)(x,y,c) = off(x,y,c); 
+//  return *this;
   return off.move_to(*this);
 }
 
