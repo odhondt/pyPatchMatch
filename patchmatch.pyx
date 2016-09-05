@@ -10,10 +10,8 @@ cimport numpy as np
 np.import_array()
 
 
-#def polsarblf(np.ndarray[np.complex64_t, ndim=4] arr, float gs=2.8, float gr=1.4, method = 'ai', bint trick=True, bint flat=False):
-
 def patch_match(np.ndarray[np.float32_t, ndim=3] arr0, np.ndarray[np.float32_t, ndim=3] arr1, psiz = 5, nit = 5):
-'''patch_match(np.ndarray[np.float32_t, ndim=3] arr0, np.ndarray[np.float32_t, ndim=3] arr1, psiz = 5, nit = 5)'''
+    '''patch_match(np.ndarray[np.float32_t, ndim=3] arr0, np.ndarray[np.float32_t, ndim=3] arr1, psiz = 5, nit = 5)'''
     cdef int dimc0 = arr0.shape[0]
     cdef int dimy0 = arr0.shape[1]
     cdef int dimx0 = arr0.shape[2]
