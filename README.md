@@ -2,11 +2,11 @@
 
 A simple python wrapper for the PatchMatch algorithm using the CImg library.
 
-##Build
+## Build
 
 run the `cl_build` script or copy/paste its content into a terminal. Then copy the `.so` in a folder belonging to your python path.
 
-##Usage
+## Usage
 
 ```python
 from patchmatch import patch_match
